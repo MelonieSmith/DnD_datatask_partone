@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<head>
+  <title>
+    D&D Statistics Challenge
+  </title>
+  <link rel="stylesheet" href=""https://use.fontawesome.com/releases/v5.6.1/css/all.css"">
+  <link href="main.css" rel="stylesheet" type="text/css">
+</head>
+<html>
+<body>
+    <div id="puzzleOne">
+      <h1 class="highlight">Escape Room One - Organising your Characters Stats</h1>
+
+      <div id=character_descriptions>
+        <section id="droid">
+          <img src="img/droid.png" alt="Droid Character">
+          <p>Name – Dis Tress<br>Age – 100 years<br>
+            Shoe size - 7<br>AC = 16<br>HP=8<br>Droid deals 2 HP damage.</p>
+        </section>
+        <section id="bard">
+          <img src="img/Bard.jpg" alt="Bard Character">
+          <p>Name – Lesley Lark<br>Age – 39 years<br>Shoe size - 10<br>
+            AC=16<br>HP=9<br>Bard deals 1 HP damage.</p>
+        </section>
+        <section id="ranger">
+          <img src="img/Ranger.png" alt="Ranger Character">
+          <p>Name – Steel Gaze<br>Age – 25 years<br>Shoe size – 8.5<br>
+            AC=15<br>HP=8<br>Ranger deals 2 HP damage.</p>
+        </section>
+		    <section id="wizard">
+          <img src="img/Wizard.jpg" alt="Wizard Character">
+          <p>Name – Flame Whisperer<br>Age – 402 years<br>Shoe size – 13.5<br>
+            AC=16<br>HP=8<br>Wizard deals 1 HP damage.</p>
+        </section>
+      </div>
+
+      <h2>Four characters have been hired to travel to a mushroom grove to
+        harvest mushrooms for the local “good” witch. The forest they must
+        travel through is rife with monsters and the undead. They have hired
+        you to be their mathematician. You wil be in constant contact throughout
+        the journey from home base, in the village of "Cobraooga", in order to
+        statistically analyse their options.<br>
+        The above cards introduce them to you and give you some basic stats
+        for each. You are told their name, age and shoe size etc.<br>
+        You can use these stats to organise leadership roles and fight
+        sequences should they be required. You know that you are going to need
+        to use these names and numbers so you take some time before they leave
+        to organise them.<br>
+        <span>Can you remember the names and descriptions of data types?</span><br>
+        Use your knowledge of Further Mathematics terminology to answer the
+        following questions in order to proceed.<br>
+      </h2>
+
+      <div id="rangeInputs" class="inputs">
+        <section id="questionOne">
+          <p style="width: 1000px;"><strong>What type of data is “Name”
+            (Nominal, Ordinal, Discrete or Continuous)?: </strong></p>
+          <input id="nameAnswer">
+        </section>
+        <section id="questionTwo">
+          <p style="width: 1000px;"><strong>What type of data is “Age”
+            (Nominal, Ordinal, Discrete or Continuous)?: </strong></p>
+          <input id="ageAnswer">
+        </section>
+        <section id="questionThree">
+          <p style="width: 1000px;"><strong>What type of data is “Shoe Size”
+            (Nominal, Ordinal, Discrete or Continuous)?: </strong></p>
+          <input id="shoesizeAnswer">
+        </section>
+
+      </div>
+
+      <section id="finishPuzzleOne">
+        <p>What type of graph would you use if
+           you wanted "name" on the x-axis and "age" on the y-axis (Bar chart,
+           Histogram, Pie chart, Scatterplot or Box-and-whisker plot)?: </p>
+        <input id="graphAnswer">
+        <button id="finishPuzzleOneButton">
+          Check answer
+        </button>
+        <h1 id="resultOne">...</h1>
+      </section>
+      <section id='congratesMoveOnPuzzleOne' class='hide'>
+        <button id= 'moveToPuzzleTwo'>
+          Well Done! Click here to start the adventure.
+        </button>
+      </section>
+    </div>
+
+
+    <div id="puzzleTwo" class='hide'>
+      <h1 class="highlight">Room Two - Choose Your Leader</h1>
+      <div id=card_descriptions>
+        <section id="header_cards">
+          <img src="img/path_forest_start.jpg" alt="Mushrooms - The aim of the game.">
+        </section>
+        <section id = 'linkToGraphs'>
+          <img src="img/Tree_message.png" alt="Message knived to tree.">
+          <p>The party finds a sheet of parchment held to the base of a tree with
+            a sharp dagger. It was left by the previous party of warriors that
+            were sent on this same mission before you.<br>It appears to be blank
+            but, Flame Whisperer produces a potion from his pack and sprays it
+            to reveal a message.<br>
+            <em><a href="D&D Quest.pdf">Download</a></em>(right click and open
+            in new tab) this link to see an
+            image of the message uploaded to you by Steel Gaze.</p>
+        </section>
+      </div>
+      <h2><p>Use this formula and a set of graphs you produced earlier (scroll
+        down on the downloded document),
+        to choose who will lead the party on this mission.
+        Your team can only proceed if you choose the most suitable leader for
+        this challenge.</p>
+      </h2>
+      <div id=puzzleTwoResults>
+        <section id="finishPuzzleTwo">
+          <input type="radio" name="choice" value="Steel Gaze"> Steel Gaze
+          <input type="radio" name="choice" value="Lesley Lark"> Lesley Lark
+          <input type="radio" name="choice" value="Flame Whisperer"> Flame Whisperer
+          <input type="radio" name="choice" value="Dis Tress"> Dis Tress
+        </section>
+      <button id='submitAnswerTwoButton' onclick="submitAnswerTwo"> Submit Answer </button>
+      </div>
+      <section onclick='onCompletionPuzzleTwo' id='finishPuzzleTwoButton' class='hide'>
+        <button id="completePuzzleTwoButton" class='hide'>
+          Correct Answer! Click here to enter the forest
+        </button>
+      </section>
+    </div>
+
+    <div id="puzzleThree" class='hide'>
+      <h1 class="highlight">Room Three - Welcome to the forest.</h1>
+      <h2>Welcome to the start of the quest. I'm afraid, in this part of the
+        forest, the dice are loaded!<br>
+        The following box-and-whisker plot shows the roll distribution.<br>
+        <img src="img/box_plot.png" style="width: 30%; height: 30%"
+        alt="Loaded Dice."><br>
+        <em>ARGH!</em><br>
+        The party is confronted by an un-dead pigmy warlord....
+      </h2>
+      <div id=warLord>
+        <section id = 'warLord_Statistics'>
+          <img src="img/pigmy.jpg" alt="Enemy number one.">
+          <p><em>Meet the Undead Pigmy Warlord.</em><br>
+            This charming fellow has an armor class of 15 and 1 hit point. If
+            he attacks you and hits he deals 2 damage but, if he attacks you
+            and misses, he falls on his bottom, receives a 'hit' and dies.<br>
+          </p>
+        </section>
+        <section id='heroSelection'>
+          <img src="img/Wizard.jpg" alt="Flame Whisperer.">
+          <p><em>Flame Whisperer steps up to battle.</em><br>
+            <br>
+            When Flame Whisperer rolls I am afraid he is below average. Not
+            only that, he is in the bottom 25%.<br>
+          </p>
+        </section>
+      </div>
+      <div id='heroRoll'>
+        <div id=puzzle3AQuestion>
+          <p><em>Flame Whisperer attacks.</em><br>
+            <button id="finishPuzzleThree">
+              What does he roll?
+            </button>
+          </p>
+          <input id="puzzleThreeAInput" type="text" autocomplete="off">
+        </div>
+        <h1 id="resultThree">...</h1>
+
+        <div id=puzzleThreeBtn class=hide>
+          <div id=puzzle3BQuestion>
+          <p>Flame attacks the Pigmy Warrior with a rock he finds resting next to
+            the path. Unfortunately it is a soft sandstone and when it hits
+            the undead pigmy it disintigrates in his face.<br>All he has
+            managed to do is irritate him! The Warlord attacks Flame and rolls the median
+            score. What does he roll?
+            <button id="finishPuzzleThreeB">
+              What does he roll?
+            </button>
+          </p>
+          <input id="puzzleThreeBInput" type="text" autocomplete="off">
+          </div>
+          <h1 id="resultThreeB">...</h1>
+
+          <div id=puzzleThreeBBtn class=hide>
+            <p>He too picks up a rock from the path. He uses his slingshot to
+              launch it at Flame Whisperer. It hits him on the knee and is sure to leave a
+              mark but, when he looks back at the Pigmy to laugh his distain,
+              he see that the recoil force of the slingshot has knocked the pigmy on
+               to his bottom.<br>The compression of the spine has killed him
+               outright! Flame has inadvertently changed the pigmy from undead to
+               dead. <em>Horah!</em></p>
+          <button id="finishPuzzleThreePartBButton">
+            Good Battle! Click here to progress to the next "room"
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id='puzzleFour' class='hide'>
+      <h1 class="highlight">"Room" Four - Boom Gate Crossing.</h1>
+      <div id=activity>
+        <section id = 'activityOne'>
+          <img src="img/boom.jpg" alt="Watch out!">
+          <p><em>Be careful of boobie traps!</em><br>
+            The party regroups and proceeds further into the forest on their
+            mushroom quest.<br>
+            A boomgate blocks their path. It is fixed with a five number
+            padlock and is heavily boobie trapped above and below. The only
+            way to proceed is to crack the code.
+          </p>
+        </section>
+        <section id='activityTwo'>
+          <img src="img/boomzoom.jpg" alt="Boomgate code?">
+          <p><em>Lesley Lark spots many numbers printed on the gate.</em><br>
+            He looks closer at the gate and sends these numbers back to you:<br>
+            <em>16, 21, 14, 12, 20, 18, 14, 10, 11, 16, 19, 25, 22, 13, 14, 12,
+              20, 22, 14, 21, 16, 17, 21, 14, 22, 18, 17, 16, 14, 19, 21, 14,
+              12, 17, 19.</em><br>
+              You come up with the idea that the code may be a
+              five number summary of this data. Find the five number summary.
+          </p>
+        </section>
+      </div>
+
+      <h2>You can use your CAS calculator to find the five number summary
+        of these numbers.<br>
+        When you have the numbers you need, iput them below - smallest to
+        largest seperated by a space.<br>
+      </h2>
+
+      <button id="finishPuzzleFourPartOne">
+        Five Number Summary
+      </button>
+      <input id="puzzleFourInputPartOne" type="text" autocomplete="off">
+      <button id="finishPuzzleFourPartTwo">
+        Are there any outliers? (Y/N)
+      </button>
+      <input id="puzzleFourInputPartTwo" type="text" autocomplete="off">
+      <br>
+      <button id='checkPuzzleFourAnswers' class='attemptButton'>
+        Try
+      </button>
+      <h1 id="resultFour">
+        ...
+      </h1>
+      <div id=puzzleFourBtn class=hide>
+      <button id="finishPuzzleFourButton" class='hide'>
+        <img src="https://media.giphy.com/media/26DNg2kTthGLHpgfm/giphy.gif" alt="Opening Lock">
+        Correct again! Click here for LAST puzzle
+      </button>
+      </div>
+    </div>
+
+    <div id='puzzleFive' class='hide'>
+      <h1 class="highlight">"Room" Five - Harvest time.</h1>
+      <div id=grove_description>
+        <section id="mushrooms">
+          <img src="img/mushrooms.jpg" alt="The grove">
+          <p>The team continued on their journey to the mushroom grove.
+            They survived several monster attacks with ease. You did a great
+            job selecting Lesley Lark as the leader. He is at home in this
+            forest.<br>
+            When they arrive at the mushroom grove they find a warning sign.
+            Steel Gaze takes a photo and sends it to you for analysis.
+          </p>
+        </section>
+      </div>
+      <section id="warning_sign">
+        <h2><em>The Warning Sign</em><br>
+          <img src="img/woodenSign.png" alt="The warning">
+          <p>The sign reads:<br>
+            This mushroom grove harvest pattern is normally distributed
+            with a mean of 21 and a standard deviation of 4. <em>WARNING</em>
+            You can only harvest amounts in the bottom 2.5%.</p>
+        </h2>
+      </section>
+      <section id="puzzleFiveButtons">
+      <button id="finishPuzzleFivePartOne">
+        Within what range of mushrooms can you harvest if you want to
+        remain in the middle 66%? (lower-upper)
+      </button>
+      <input id="puzzleFiveInputPartOne" type="text" autocomplete="off">
+      <button id="finishPuzzleFivePartTwo">
+        Given the warning sign, what is the Maximum number of mushrooms the
+        team can harvest?
+      </button>
+      <input id="puzzleFiveInputPartTwo" type="text" autocomplete="off">
+      <br>
+      <button id='checkPuzzleFiveAnswers' class='attemptButton'>
+        Try
+      </button>
+    </section>
+      <h1 id="resultFive">
+        ...
+      </h1>
+
+      <div id="finishPuzzleFive" class='hide'>
+        <button id="finishPuzzleFiveButton">
+          Well Done!<br>
+          You have made the Good Witch very happy!<br>
+          <em>The team gains 2 experience points.</em>
+        </button>
+        <section id='celebration'>
+        <img src="https://media.giphy.com/media/3otPoTggaYFNd1FdAI/giphy.gif" alt="Happy Witch">
+        </section>
+      </div>
+  </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Knewave');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+* {
+  box-sizing: border-box;
+}
+h1  {
+  color: black;
+  font-family: 'Permenant Marker', san-serif;
+}
+
+
+.hide {
+  display: none;
+}
+
+body {
+  margin: 36px 96px;
+  font-size: 28px;
+  background: green;
+  color: black;
+  font-family: "Crimson Text", serif;
+  line-height: 2;
+}
+span  {
+  color: black;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.highlight {
+  width: 700px;
+  border: 5px solid black;
+  border-radius: 15px;
+  text-align: center;
+  color: black;
+  font-family: "Permanent Marker", cursive;
+  margin: auto;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: 38px;
+  background-color: rgb(194, 209, 194);
+}
+
+h2 {
+  margin: auto;
+  text-align: center;
+  font-size: 20px;
+  line-height: 2;
+  border: 5px solid black;
+  border-radius: 15px;
+  background-color: rgb(194, 209, 194);
+  padding: 10px;
+  color: black;
+}
+
+#puzzleFive > h2  {
+  margin:10px 0px;
+}
+
+#puzzleOne > h2  {
+  margin-bottom: 10px;
+}
+
+#finishPuzzleOne  {
+  border: 5px solid black;
+  background-color: rgb(194, 209, 194);
+  color: black;
+  text-align: center;
+  padding: 10px;
+  margin: auto;
+  width: 800px;
+}
+
+#answer  {
+  background-color: rgb(194, 209, 194);
+  color: black;
+}
+#questionOne, #questionTwo, #questionThree, #questionFour, #perpetunityAmount  {
+  background-color: rgb(194, 209, 194);
+  border: 5px solid black;
+  border-radius: 15px;
+  padding: 5px 20px;
+  margin: auto;
+  margin-bottom: 15px;
+  color: black;
+  font-weight: bold;
+}
+
+#droid>img, #bard>img, #ranger>img, #wizard>img  {
+  width: 200px;
+  margin: auto;
+  border: 10px solid black;
+}
+
+#droid>img:hover, #bard>img:hover, #ranger>img:hover, #wizard>img:hover  {
+  width:215px;
+}
+
+
+#droid, #bard, #ranger, #wizard  {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  line-height: 1;
+  height: 540px;
+  width: 325px;
+  border: 5px solid black;
+  color: black;
+  background-color: rgb(194, 209, 194);
+  margin: auto;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+button {
+  background: rgb(224, 224, 224);
+  border-radius: 4px;
+  font-family: "Permanent Marker", cursive;
+  font-size: 30px;
+  padding: 10px 20px;
+  color: black;
+  border: 5px solid black;
+  border-radius: 15px;
+  text-align: center;
+  vertical-align: center;
+}
+
+#moveToPuzzleTwo, #puzzleThreeAInput, #puzzleThreeBInput, #resultThree, #resultThreeB, #finishPuzzleTwoButtonCheck, #resultTwo, #finishPuzzleThree, #finishPuzzleThreeB, #resultFour, #resultFive, #checkPuzzleFourAnswers, #completePuzzleTwoButton, #finishPuzzleThreePartAButton, #finishPuzzleThreePartBButton, #finishPuzzleFourPartOne, #finishPuzzleFourPartTwo, #puzzleFourInputPartTwo, #puzzleFourInputPartOne, #finishPuzzleFourButton, #puzzleFiveInputPartOne, #puzzleFiveInputPartTwo  {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+#finishPuzzleFourPartOne, #finishPuzzleFourPartTwo  {
+  text-align: center;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#puzzleThreeInput, #puzzleThreeBInput  {
+  margin-top: 20px;
+}
+#finishPuzzleOne > p {
+  text-align:center;
+  margin: auto;
+  margin-bottom: 10px;
+  width: 700px;
+}
+#finishPuzzleOne  {
+  border-radius: 15px;
+}
+
+#puzzleTwo > h2 {
+  width: 825px;
+}
+em  {
+  font-weight: bold;
+}
+
+#header_cards > img {
+  width: 820px;
+  border: 10px solid black;
+  border-radius: 15px;
+  height: 300px;
+}
+
+#card_descriptions  {
+  margin: auto;
+  text-align: center;
+}
+
+#puzzleTwoResults  {
+  display: inline-block;
+  text-align: center;
+  margin-left: 25%;
+}
+#warLord  {
+  display: block;
+  text-align: center;
+}
+#linkToGraphs  {
+  vertical-align: top;
+  text-align: center;
+  display: block;
+  border: 5px solid black;
+  border-radius: 15px;
+  color: black;
+  background-color: rgb(194, 209, 194);
+  width:800px;
+  height:700px;
+  font-size: 24px;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+#warLord_Statistics, #heroSelection  {
+  vertical-align: top;
+  text-align: center;
+  display: inline-block;
+  border: 5px solid black;
+  border-radius: 15px;
+  color: black;
+  background-color: rgb(194, 209, 194);
+  width:400px;
+  height:650px;
+  font-size: 24px;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+#finishPuzzleThree, #finishPuzzleThreeB  {
+  margin-top: 5px;
+}
+#heroRoll  {
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+  color: black;
+  background-color: rgb(194, 209, 194);
+  border: 5px solid black;
+  border-radius: 15px;
+}
+#warLord_Statistics > img, #heroSelection > img,  #linkToGraphs > img{
+  width: 200px;
+  border: 5px solid black;
+}
+#warLord_Statistics > img:hover, #heroSelection > img:hover  {
+  width: 210px;
+}
+#linkToGraphs > img:hover {
+  width: 250px;
+  border: 5px solid black;
+}
+}
+#finishPuzzleTwo > p  {
+  padding: 10px;
+  border: 5px solid black;
+  border-radius: 15px;
+  display: inline-block;
+  color: black;
+  vertical-align: center;
+}
+
+input {
+  font-family: "Roboto", san-serif;
+  line-height: 2;
+  font-size: 30px;
+  color: black;
+  background: white;
+  border: 3px solid black;
+  border-radius: 15px
+}
+
+input.range {
+  display: inline-block;
+  margin: 24px 0;
+  width: 100%;
+  color: black;
+}
+
+
+#activityOne > img  {
+  width: 200px;
+}
+#activityTwo>img {
+  width: 350px;
+}
+
+#activityOne > img:hover  {
+  width: 210px;
+}
+#activityTwo > img:hover {
+  width: 560px;
+}
+
+#activityOne, #activityTwo  {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  border: 5px solid black;
+  border-radius: 15px;
+  color: black;
+  background-color: rgb(194, 209, 194);
+  width: 400px;
+  height: 720px;
+  margin: auto;
+  font-size: 24px;
+  padding: 10px;
+  background-color: rgb(194, 209, 194);
+}
+
+#activity  {
+  display: block;
+  text-align: center;
+}
+#finishPuzzleFourButton {
+  width: 770px;
+  text-align: center;
+}
+
+#finishPuzzleFourButton > img {
+  width: 10%;
+}
+#finishPuzzleFiveButton, #celebration {
+  display: inline-block;
+  margin-left: 450px;
+  width: 425px;
+}
+#mushrooms > img {
+  width: 60%;
+  border: 5px solid black;
+}
+
+#warning_sign > img {
+  border: 15px solid black;
+}
+
+#grove_description  {
+  vertical-align: top;
+  text-align: center;
+  display: inline-block;
+  border: 5px solid black;
+  border-radius: 15px;
+  color: black;
+  background-color: rgb(194, 209, 194);
+  height: 700px;
+  font-size: 24px;
+  margin: auto;
+  padding: 10px;
+}
+
+#puzzleFiveButtons {
+  vertical-align: top;
+  margin: auto;
+  text-align: center;
+}
