@@ -15,9 +15,9 @@ function checkIfLinedUp() {
       window.scrollTo(0,document.body.scrollHeight); //if they are all correct show the next button
     }
   }
-nameAnswer.onchange = checkIfLinedUp;
-ageAnswer.onchange = checkIfLinedUp;
-shoesizeAnswer.onchange = checkIfLinedUp;
+nameAnswer.oninput = checkIfLinedUp;
+ageAnswer.oninput = checkIfLinedUp;
+shoesizeAnswer.oninput = checkIfLinedUp;
 
 //Graph question = Bar chart should be selected
 function onAnswerOne()  {
