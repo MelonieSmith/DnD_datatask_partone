@@ -8,8 +8,21 @@
 </head>
 <html>
 <body>
-    <div id="puzzleOne">
-      <h1 class="highlight">Escape Room One - Organising your Characters Stats</h1>
+    <div id="openPage">
+      <h1 class="highlight">Welcome to an escape room adventure</h1>
+      <section id="introduction">
+        <img src="https://media.giphy.com/media/9ADoZQgs0tyww/giphy.gif" alt="Yay Statistics">
+        <p>This is the first adventure in Statistics. The aim is to use the
+          skills you have developed in Further Mathematics to complete a D&D
+          inspired mission. Before you can complete this mission you need to
+          master the uni variate component of the course.</p>
+      </section>
+      <button id="begin">
+        Click here to start the adventure
+      </button>
+    </div>
+    <div id="puzzleOne" class="hide">
+      <h1 class="highlight">Escape "Room" One - Organising your Characters Stats</h1>
 
       <div id=character_descriptions>
         <section id="droid">
@@ -37,7 +50,7 @@
       <h2>Four characters have been hired to travel to a mushroom grove to
         harvest mushrooms for the local “good” witch. The forest they must
         travel through is rife with monsters and the undead. They have hired
-        you to be their mathematician. You wil be in constant contact throughout
+        you to be their mathematician. You will be in constant contact throughout
         the journey from home base, in the village of "Cobraooga", in order to
         statistically analyse their options.<br>
         The above cards introduce them to you and give you some basic stats
@@ -53,33 +66,37 @@
 
       <div id="rangeInputs" class="inputs">
         <section id="questionOne">
-          <p style="width: 1000px;"><strong>What type of data is “Name”
+          <p style="width: 100%;"><strong>What type of data is “Name”
             (Nominal, Ordinal, Discrete or Continuous)?: </strong></p>
           <input id="nameAnswer">
         </section>
         <section id="questionTwo">
-          <p style="width: 1000px;"><strong>What type of data is “Age”
+          <p style="width: 100%;"><strong>What type of data is “Age”
             (Nominal, Ordinal, Discrete or Continuous)?: </strong></p>
           <input id="ageAnswer">
         </section>
         <section id="questionThree">
-          <p style="width: 1000px;"><strong>What type of data is “Shoe Size”
-            (Nominal, Ordinal, Discrete or Continuous)?: </strong></p>
+          <p style="width: 100%;"><strong>What type of data is “Shoe Size”
+            (Nominal, Ordinal, Discrete or Continuous) ? (Press enter to check answers): </strong></p>
           <input id="shoesizeAnswer">
         </section>
 
       </div>
 
-      <section id="finishPuzzleOne">
-        <p>What type of graph would you use if
-           you wanted "name" on the x-axis and "age" on the y-axis (Bar chart,
-           Histogram, Pie chart, Scatterplot or Box-and-whisker plot)?: </p>
-        <input id="graphAnswer">
-        <button id="finishPuzzleOneButton">
-          Check answer
-        </button>
-        <h1 id="resultOne">...</h1>
-      </section>
+  <section id="finishPuzzleOne" class="hide">
+    <p>What type of graph would you use if
+       you wanted "name" on the x-axis and "age" on the y-axis?: </p>
+      Select the graph:
+      <select id="myList" onchange="onAnswerOne()">
+        <option>Select a graph</option>
+        <option>Scatterplot</option>
+        <option>Histogram</option>
+        <option>Box-and-whisker plot</option>
+        <option>Bar chart</option>
+        <option>Pie chart</option>
+      </select>
+    <h1 id="resultOne">...</h1>
+  </section>
       <section id='congratesMoveOnPuzzleOne' class='hide'>
         <button id= 'moveToPuzzleTwo'>
           Well Done! Click here to start the adventure.
@@ -127,7 +144,7 @@
       </section>
     </div>
 
-    <div id="puzzleThree" class='hide'>
+    <div id="puzzleThree" class="hide">
       <h1 class="highlight">Room Three - Welcome to the forest.</h1>
       <h2>Welcome to the start of the quest. I'm afraid, in this part of the
         forest, the dice are loaded!<br>
@@ -149,7 +166,6 @@
         <section id='heroSelection'>
           <img src="img/Wizard.jpg" alt="Flame Whisperer.">
           <p><em>Flame Whisperer steps up to battle.</em><br>
-            <br>
             When Flame Whisperer rolls I am afraid he is below average. Not
             only that, he is in the bottom 25%.<br>
           </p>
@@ -197,7 +213,7 @@
     </div>
   </div>
 
-    <div id='puzzleFour' class='hide'>
+    <div id='puzzleFour' class="hide">
       <h1 class="highlight">"Room" Four - Boom Gate Crossing.</h1>
       <div id=activity>
         <section id = 'activityOne'>
@@ -207,7 +223,7 @@
             mushroom quest.<br>
             A boomgate blocks their path. It is fixed with a five number
             padlock and is heavily boobie trapped above and below. The only
-            way to proceed is to crack the code.
+            way to proceed is to crack the code.<br><br>
           </p>
         </section>
         <section id='activityTwo'>
@@ -252,7 +268,7 @@
       </div>
     </div>
 
-    <div id='puzzleFive' class='hide'>
+    <div id='puzzleFive' class="hide">
       <h1 class="highlight">"Room" Five - Harvest time.</h1>
       <div id=grove_description>
         <section id="mushrooms">
@@ -268,7 +284,7 @@
       </div>
       <section id="warning_sign">
         <h2><em>The Warning Sign</em><br>
-          <img src="img/woodenSign.png" alt="The warning">
+          <img id="warning_sign_image" src="img/woodenSign.png" alt="The warning">
           <p>The sign reads:<br>
             This mushroom grove harvest pattern is normally distributed
             with a mean of 21 and a standard deviation of 4. <em>WARNING</em>

@@ -1,22 +1,41 @@
+function start()  {
+  openPage.classList.toggle('hide');
+  puzzleOne.classList.toggle('hide');
+}
+begin.onclick = start;
+
 //Name question = Nominal or nominal
 //Age question = Continuous or continuous
 //Shoe Size question = Discrete or discrete
-function checkIfLinedUp(event) {
-  if (nameAnswer.value == 'Nominal' && nameAnswer.value == "nominal" && ageAnswer.value ==  "Continuous" && ageAnswer.value == "continuous"  && shoesizeAnswer.value == "Discrete"  &&  shoesizeAnswer.value == "discrete") {
-      finishPuzzleOne.classList.toggle('hide'); //if they are all correct show the next button
+
+function checkIfLinedUp() {
+
+  if (nameAnswer.value.toLowerCase() === 'nominal' && ageAnswer.value.toLowerCase() ===  "continuous" && shoesizeAnswer.value.toLowerCase() === "discrete") {
+      finishPuzzleOne.classList.toggle('hide');
+      window.scrollTo(0,document.body.scrollHeight); //if they are all correct show the next button
     }
   }
-rangeInputs.onchange = checkIfLinedUp;
-//Graph question = Bar Chart or bar chart or Bar chart
+nameAnswer.onchange = checkIfLinedUp;
+ageAnswer.onchange = checkIfLinedUp;
+shoesizeAnswer.onchange = checkIfLinedUp;
+
+//Graph question = Bar chart should be selected
 function onAnswerOne()  {
-  resultOne.textContent = 'Nope!';
-  if (graphAnswer.value == 'Bar Chart' || graphAnswer.value == 'Bar chart' || graphAnswer.value == "bar chart") {
+  var ddl = document.getElementById("myList");
+  var selectedValue = ddl.options[ddl.selectedIndex].value;
+    if (selectedValue == "Select a graph")
+   {
+    alert("Please select a graph type.");
+   }
+    resultOne.textContent = 'Nope!';
+    if (myList.value == 'Bar chart') {
         congratesMoveOnPuzzleOne.classList.toggle('hide');
         window.scrollTo(0,document.body.scrollHeight);
         resultOne.textContent = "Good Job!";
         }
-      }
-finishPuzzleOneButton.onclick = onAnswerOne;
+
+  }
+
 
 function movePuzzleTwo()  {
   puzzleOne.classList.toggle('hide');
@@ -87,6 +106,7 @@ function onCompletionPuzzleThreeB()  {
     resultThree.textContent = "Correct Again!";
     setTimeout(function(){puzzle3BQuestion.classList.toggle('hide')
                           puzzleThreeBBtn.classList.toggle('hide');
+                          window.scrollTo(0,document.body.scrollHeight);
                           }, 1000);
   }
 }
